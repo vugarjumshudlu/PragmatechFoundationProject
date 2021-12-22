@@ -69,8 +69,9 @@ color: red;
     margin-left: 30px;
 }
 .background1{
-    background-image: url(../images/image1.jpg);
-    height: 569px;
+    background-image: url(../images/1.jpg);
+    object-fit: calc(100%-10px);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 569px
 }
