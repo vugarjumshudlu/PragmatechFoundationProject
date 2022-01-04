@@ -1,8 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     display: flex;
     flex-direction: column;
-    scroll-behavior: smooth;
 }
+
 /* Sidebarın kodlarını yazmağa başladım */
 .sidebar {
     position: fixed;
@@ -496,7 +499,7 @@ body{
 /*Counter*/
 .counter{
     width: 100%;
-    height: 275px;
+    height: auto;
     margin-top: 100px;
     background-image: url(../images/ravenna.png);
     display: flex;
