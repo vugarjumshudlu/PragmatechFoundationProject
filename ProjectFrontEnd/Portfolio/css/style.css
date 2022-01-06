@@ -5,6 +5,10 @@ body{
     display: flex;
     flex-direction: column;
 }
+.container{
+    width: calc(100%-350px);
+    margin-left: 350px;
+}
 
 /* Sidebarın kodlarını yazmağa başladım */
 .sidebar {
@@ -35,6 +39,9 @@ body{
     list-style-type: none;
     border-bottom: 1px solid #FFFFFF06;
     padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
 }
 .menu ul li a{
     color: white;
@@ -43,15 +50,13 @@ body{
 #home1{
     color: red;
 }
-.menu ul li:hover{
-    border-bottom: 3px solid #FFFFFF06;
-}
-.menu ul li a:hover{
+
+.menu ul li:hover a{
     color: red;
 
 }
 .socialnetwork ul li:hover{
-    color: green;
+    color: red;
     cursor: pointer;
 }
 .socialnetwork{
@@ -76,11 +81,9 @@ body{
 
 /*Content hissənin kodlarını yazmağa başladım*/
 .content {
-    width: calc(100% - 350px);
     box-sizing: border-box;
     top: 0px;
     left: 0px;
-    margin-left: 350px;
 }
 .intro{
     background-image: url(../images/1.jpg);
@@ -190,9 +193,7 @@ body{
 /*Haqqımda hissəsinin kodlarını yazmağa başladım*/
 
 .about{
-    width: calc(100% - 350px);
     margin-top: 150px;
-    margin-left: 350px;
     height: 1000px;
     display: flex;
     flex-direction: column;
@@ -323,9 +324,7 @@ body{
 
 /*Məqalə hissəsinin kodlarını yazmağa başladım*/
 .article{
-    width: calc(100% - 350px);
     height: 100%;
-    margin-left: 350px;
     background-color: #f9f9f9; 
 }
 .articleinf{
@@ -350,9 +349,8 @@ body{
     margin-top: 10px;
 }
 .articlebox{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     margin-top: 80px;
     margin-bottom: 38px;
     margin-left: 40px;
@@ -390,6 +388,14 @@ body{
     margin-right: 45px;
     margin-bottom: 45px;
 }
+.box:hover{
+    box-shadow: 0 0 20px rgb(0 0 0 / 9%);
+    transition: all .3s ease;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
 
 .working{
     margin-left: 40px;
@@ -412,10 +418,7 @@ body{
 /*Məqalə hissəsinin kodlarını yazmağı bitirdim*/
 
 /*Portfolio hissəsinin kodlarını yazmağa başladım*/
-.portfolio{
-    width: calc(100%-350px);
-    margin-left: 350px;
-}
+
 /*Portfolio başlanğıc info yazısı*/
 .portfolioinf{
     margin-left: 40px;
@@ -445,13 +448,17 @@ body{
     margin-right: 42px;
     margin-bottom: 42px;
 }
-.portfoliobox{
+.portfolioboxs{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 38px;
     margin-left: 40px;
+}
+#portfoliobox:hover{
+    transform: scale(1.1) translateZ(0);
+    transition: .5s;
 }
 .box1{
     background-image: url(../images/2.jpg);
@@ -497,7 +504,7 @@ body{
 }
 /*Work box finished*/
 /*Counter*/
-.counter{
+.counters{
     width: 100%;
     height: auto;
     margin-top: 100px;
@@ -510,19 +517,19 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: black;
 }
-.counter h3{
+.counters h3{
     font-size: 50px;
     margin-top: 10px;
     color: white;
 }
-.counter span{
+.counters span{
     line-height: 2;
     letter-spacing: .5px;
     margin-top: 10px;
     font-weight: 500;
     color: white;
 }
-.counter1,.counter2,.counter3,.counter4{
+.counter{
     margin: 20px;
     position: center;
     display: flex;
